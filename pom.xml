@@ -10,10 +10,11 @@
         <module>mall-monitor</module>
         <module>mall-search</module>
         <module>mall-usr</module>
-        <module>mall-images</module>
-        <module>mall-order</module>
-        <module>mall-comment</module>
         <module>mall-commodity</module>
+        <module>mall-comment</module>
+        <module>mall-order</module>
+        <module>mall-images</module>
+        <module>mall-admin</module>
     </modules>
     <name>ct_mall</name>
     <description>Demo project for Spring Boot</description>
