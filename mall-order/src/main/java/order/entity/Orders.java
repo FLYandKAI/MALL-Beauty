@@ -1,4 +1,4 @@
-package com.baomidou.commodity.entity;
+package order.entity;
 
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -17,7 +17,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 商品信息表
+ * 订单表
  * </p>
  *
  * @author 黄俭豪
@@ -26,35 +26,38 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="Commodity对象", description="商品信息表")
-public class Commodity implements Serializable {
+@ApiModel(value="Orders对象", description="订单表")
+public class Orders implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "商品编号")
-    @TableId(value = "com_id", type = IdType.ID_WORKER)
-    private Long comId;
+    @ApiModelProperty(value = "订单编号")
+    @TableId(value = "order_id", type = IdType.ID_WORKER)
+    private Long orderId;
 
-    @ApiModelProperty(value = "商品类型编号")
-    private Long comTypeId;
+    @ApiModelProperty(value = "地址编号")
+    private String addrId;
 
-    @ApiModelProperty(value = "商品名称")
-    private String comName;
+    @ApiModelProperty(value = "订单详情id")
+    private Long orderDetailsId;
 
-    @ApiModelProperty(value = "商品详情编号")
-    private Long comDetailId;
+    @ApiModelProperty(value = "实付价格")
+    private BigDecimal payment;
 
-    @ApiModelProperty(value = "商品价格")
-    private BigDecimal comPrice;
+    @ApiModelProperty(value = "订单状态")
+    private Integer status;
 
-    @ApiModelProperty(value = "商品库存")
-    private Integer comStock;
+    @ApiModelProperty(value = "发货时间")
+    private Date sendTime;
 
-    @ApiModelProperty(value = "商品状态（0为下架，1为销售）")
-    private Integer comStatus;
+    @ApiModelProperty(value = "确认收货时间")
+    private Date receiptTime;
 
-    @ApiModelProperty(value = "商品图片编号")
-    private Long comImgId;
+    @ApiModelProperty(value = "订单关闭时间")
+    private Date closeTime;
+
+    @ApiModelProperty(value = "备注")
+    private String remark;
 
     @ApiModelProperty(value = "创建时间")
     @TableField(fill = FieldFill.INSERT)
