@@ -27,7 +27,7 @@ public class KuangCode {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         //设置代码生成路径
-        gc.setOutputDir(projectPath + "/mall-order/src/main/java");
+        gc.setOutputDir(projectPath + "/mall-shoppingCart/src/main/java");
         gc.setAuthor("黄俭豪");
         //  是否生成完打开文件夹
         gc.setOpen(false);
@@ -49,9 +49,9 @@ public class KuangCode {
         mpg.setDataSource(dsc);
 //3、包的配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName("order");
+        // pc.setModuleName("order");
         //父包名
-        pc.setParent("order");
+        pc.setParent("shoppingCart");
         pc.setEntity("entity");
         pc.setMapper("mapper");
         pc.setService("service");
@@ -59,7 +59,7 @@ public class KuangCode {
         mpg.setPackageInfo(pc);
 //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("commodity","com_sort","item_param","inti_img"); // 设置要映射的表名
+        strategy.setInclude("inti_comment","inti_img","inti_like","intitation","user"); // 设置要映射的表名
         //       驼峰命名
         strategy.setNaming(NamingStrategy.underline_to_camel);
         //        列也支持下划线转驼峰
@@ -72,6 +72,7 @@ public class KuangCode {
 //        自动填充
         TableFill tableFill = new TableFill("create_time", FieldFill.INSERT);
         TableFill tableFill1 = new TableFill("updata_time", FieldFill.UPDATE);
+
         ArrayList<TableFill> tableFills = new ArrayList<>();
         tableFills.add(tableFill);
         tableFills.add(tableFill1);
