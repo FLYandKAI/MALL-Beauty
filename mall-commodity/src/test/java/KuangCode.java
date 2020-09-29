@@ -27,12 +27,12 @@ public class KuangCode {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         //设置代码生成路径
-        gc.setOutputDir(projectPath + "/mall-commodity/src/main/java");
+        gc.setOutputDir(projectPath + "/mall-order/src/main/java");
         gc.setAuthor("黄俭豪");
         //  是否生成完打开文件夹
         gc.setOpen(false);
         //是否覆盖原来生成
-        gc.setFileOverride(false); // 是否覆盖
+        gc.setFileOverride(true); // 是否覆盖
         gc.setServiceName("%sService"); // 去Service的I前缀
         gc.setIdType(IdType.ID_WORKER);
         gc.setDateType(DateType.ONLY_DATE);
@@ -49,9 +49,9 @@ public class KuangCode {
         mpg.setDataSource(dsc);
 //3、包的配置
         PackageConfig pc = new PackageConfig();
-        // pc.setModuleName("commodity");
+        pc.setModuleName("order");
         //父包名
-        pc.setParent("commodity");
+        pc.setParent("order");
         pc.setEntity("entity");
         pc.setMapper("mapper");
         pc.setService("service");
@@ -59,7 +59,7 @@ public class KuangCode {
         mpg.setPackageInfo(pc);
 //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("commodity"); // 设置要映射的表名
+        strategy.setInclude("commodity","com_sort","item_param","inti_img"); // 设置要映射的表名
         //       驼峰命名
         strategy.setNaming(NamingStrategy.underline_to_camel);
         //        列也支持下划线转驼峰

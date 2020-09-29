@@ -1,6 +1,5 @@
 package commodity.entity;
 
-import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.Version;
@@ -17,7 +16,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 商品信息表
+ * 商品分类信息表
  * </p>
  *
  * @author 黄俭豪
@@ -26,35 +25,23 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="Commodity对象", description="商品信息表")
-public class Commodity implements Serializable {
+@ApiModel(value="ComSort对象", description="商品分类信息表")
+public class ComSort implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "商品编号")
-    @TableId(value = "com_id", type = IdType.ID_WORKER)
-    private Long comId;
-
     @ApiModelProperty(value = "商品类型编号")
-    private Long comSortId;
+    @TableId(value = "com_type_id", type = IdType.ID_WORKER)
+    private Long comTypeId;
 
-    @ApiModelProperty(value = "商品名称")
-    private String comName;
+    @ApiModelProperty(value = "商品父类编号")
+    private Long comTypeParentId;
 
-    @ApiModelProperty(value = "商品详情编号")
-    private Long comItemParamId;
+    @ApiModelProperty(value = "类别名称")
+    private String comTypeName;
 
-    @ApiModelProperty(value = "商品价格")
-    private BigDecimal comPrice;
-
-    @ApiModelProperty(value = "商品库存")
-    private Integer comStock;
-
-    @ApiModelProperty(value = "商品状态（0为下架，1为销售）")
-    private Integer comStatus;
-
-    @ApiModelProperty(value = "商品图片编号")
-    private Long comImgId;
+    @ApiModelProperty(value = "类别状态（1为可用，0为不可用）")
+    private Integer comTypeStatus;
 
     @ApiModelProperty(value = "创建时间")
     @TableField(fill = FieldFill.INSERT)
