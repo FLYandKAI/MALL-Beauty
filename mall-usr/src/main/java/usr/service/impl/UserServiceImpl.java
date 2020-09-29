@@ -1,5 +1,6 @@
 package usr.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import usr.entites.User;
 import usr.mapper.UserMapper;
 import usr.service.UserService;
@@ -16,6 +17,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+    @Autowired
+    private UserMapper userMapper;
 
-
+    public void selectList(){
+    }
 }

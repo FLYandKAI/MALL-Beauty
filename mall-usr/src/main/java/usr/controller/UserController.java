@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import usr.entites.User;
 import usr.service.UserService;
 
+import java.util.Map;
+
 /**
  * <p>
  * 用户表 前端控制器
@@ -30,5 +32,12 @@ public class UserController {
         User user = userService.getById(id);
         return user;
     }
+
+    @GetMapping("/getAll")
+    public Map searchAll(){
+        Map<String, Object> map = userService.getMap(null);
+        return map;
+    }
+
 }
 
