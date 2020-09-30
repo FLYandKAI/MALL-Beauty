@@ -71,7 +71,7 @@ class CodeGeneratorTest {
         strategy.setLogicDeleteFieldName("deleted");
 //        自动填充
         TableFill tableFill = new TableFill("create_time", FieldFill.INSERT);
-        TableFill tableFill1 = new TableFill("updata_time", FieldFill.UPDATE);
+        TableFill tableFill1 = new TableFill("update_time", FieldFill.UPDATE);
         ArrayList<TableFill> tableFills = new ArrayList<>();
         tableFills.add(tableFill);
         tableFills.add(tableFill1);

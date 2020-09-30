@@ -20,7 +20,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author 黄俭豪
- * @since 2020-09-29
+ * @since 2020-09-30
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -45,6 +45,7 @@ public class User implements Serializable {
     private Date createTime;
 
     @ApiModelProperty(value = "更新时间")
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
     @ApiModelProperty(value = "本记录是否有效")

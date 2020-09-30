@@ -59,7 +59,7 @@ public class KuangCode {
         mpg.setPackageInfo(pc);
 //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("inti_comment","inti_img","inti_like","intitation","user"); // 设置要映射的表名
+        strategy.setInclude("shopping_cart","user","commodity"); // 设置要映射的表名
         //       驼峰命名
         strategy.setNaming(NamingStrategy.underline_to_camel);
         //        列也支持下划线转驼峰
@@ -71,7 +71,7 @@ public class KuangCode {
         strategy.setLogicDeleteFieldName("deleted");
 //        自动填充
         TableFill tableFill = new TableFill("create_time", FieldFill.INSERT);
-        TableFill tableFill1 = new TableFill("updata_time", FieldFill.UPDATE);
+        TableFill tableFill1 = new TableFill("update_time", FieldFill.INSERT_UPDATE);
 
         ArrayList<TableFill> tableFills = new ArrayList<>();
         tableFills.add(tableFill);

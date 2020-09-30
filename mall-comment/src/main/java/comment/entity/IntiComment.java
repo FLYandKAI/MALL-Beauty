@@ -48,6 +48,7 @@ public class IntiComment implements Serializable {
     private Date createTime;
 
     @ApiModelProperty(value = "更新时间")
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
     @ApiModelProperty(value = "操作者")

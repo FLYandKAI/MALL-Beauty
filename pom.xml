@@ -16,6 +16,7 @@
         <module>mall-images</module>
         <module>mall-admin</module>
         <module>mall-shoppingCart</module>
+        <module>mall-utils</module>
     </modules>
     <name>ct_mall</name>
     <description>Demo project for Spring Boot</description>

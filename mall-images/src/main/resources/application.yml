@@ -1,0 +1,17 @@
+server:
+  port: 8085
+spring:
+  datasource:
+    username: zhengshukai
+    password: ZHENGshukai
+    url: jdbc:mysql://rm-wz9qo2um0eygb0a6qso.mysql.rds.aliyuncs.com:3306/shop?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 10
+      max-active: 20
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+  profiles:
+    active: dev
