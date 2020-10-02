@@ -20,7 +20,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author 黄俭豪
- * @since 2020-09-30
+ * @since 2020-10-02
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -33,6 +33,9 @@ public class IntiImg implements Serializable {
     @ApiModelProperty(value = "帖子图片编号")
     @TableId(value = "inti_img_id", type = IdType.ID_WORKER)
     private Long intiImgId;
+
+    @ApiModelProperty(value = "帖子图片编号(一个帖子对应多个图片编号)")
+    private Long intiId;
 
     @ApiModelProperty(value = "帖子组名（服务器保存)")
     private String intiImgGroup;
@@ -57,7 +60,7 @@ public class IntiImg implements Serializable {
 
     @ApiModelProperty(value = "历史版本")
     @Version
-    private Long lastVersion;
+    private Integer lastVersion;
 
     @ApiModelProperty(value = "操作者")
     private Long byWho;

@@ -6,6 +6,7 @@ import usr.entites.User;
 import usr.mapper.UserMapper;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @SpringBootTest
 public class usrApplicationTests {
@@ -15,7 +16,7 @@ public class usrApplicationTests {
     private UserMapper userMapper;
 
     @Test
-    void contextLoads(){
+    void update(){
         User user = new User();
         // User user = userMapper.selectById(4654654L);
         user.setUserId(4654654L);
@@ -25,4 +26,18 @@ public class usrApplicationTests {
         // System.out.println(userMapper.insert(user));
         System.out.println(userMapper.updateById(user));
     }
+
+    @Test
+    void deleteUser(){
+        System.out.println(userMapper.deleteById(123L));
+    }
+
+    @Test
+    void selectUser(){
+        List<User> users = userMapper.selectList(null);
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+
 }

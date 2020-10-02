@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author 黄俭豪
- * @since 2020-09-30
+ * @since 2020-10-02
  */
 @Service
 public class IntiImgServiceImpl extends ServiceImpl<IntiImgMapper, IntiImg> implements IntiImgService {

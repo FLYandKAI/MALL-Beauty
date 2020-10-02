@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author 黄俭豪
- * @since 2020-09-30
+ * @since 2020-10-02
  */
 @RestController
 @RequestMapping("/inti-img")

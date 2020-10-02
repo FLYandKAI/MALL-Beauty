@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author 黄俭豪
- * @since 2020-09-30
+ * @since 2020-10-02
  */
 public interface ComImgMapper extends BaseMapper<ComImg> {
 

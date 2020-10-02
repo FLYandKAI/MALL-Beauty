@@ -20,7 +20,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author 黄俭豪
- * @since 2020-09-30
+ * @since 2020-10-02
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -33,6 +33,9 @@ public class ComImg implements Serializable {
     @ApiModelProperty(value = "商品图片编号")
     @TableId(value = "com_img_id", type = IdType.ID_WORKER)
     private Long comImgId;
+
+    @ApiModelProperty(value = "商品编号(每一个商品编号对应多个图片编号)")
+    private Long comId;
 
     @ApiModelProperty(value = "商品组名（服务器保存)")
     private String comImgGroup;
@@ -57,7 +60,7 @@ public class ComImg implements Serializable {
 
     @ApiModelProperty(value = "历史版本")
     @Version
-    private Long lastVersion;
+    private Integer lastVersion;
 
     @ApiModelProperty(value = "操作者")
     private Long byWho;
