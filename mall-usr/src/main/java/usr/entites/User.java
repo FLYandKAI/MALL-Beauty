@@ -20,7 +20,11 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author 郑树凯
+<<<<<<< HEAD
  * @since 2020-09-20
+=======
+ * @since 2020-09-30
+>>>>>>> hao
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -45,6 +49,10 @@ public class User implements Serializable {
     private Date createTime;
 
     @ApiModelProperty(value = "更新时间")
+<<<<<<< HEAD
+=======
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+>>>>>>> hao
     private Date updateTime;
 
     @ApiModelProperty(value = "本记录是否有效")
@@ -53,7 +61,14 @@ public class User implements Serializable {
 
     @ApiModelProperty(value = "历史版本")
     @Version
+<<<<<<< HEAD
     private Long lastVersion;
+=======
+    private Integer lastVersion;
+
+    @ApiModelProperty(value = "操作者")
+    private String byWho;
+>>>>>>> hao
 
 
 }

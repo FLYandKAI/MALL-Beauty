@@ -10,9 +10,19 @@
         <module>mall-monitor</module>
         <module>mall-search</module>
         <module>mall-usr</module>
+<<<<<<< HEAD
         <module>mall-images</module>
         <module>mall-order</module>
         <module>mall-comment</module>
+=======
+        <module>mall-commodity</module>
+        <module>mall-comment</module>
+        <module>mall-order</module>
+        <module>mall-images</module>
+        <module>mall-admin</module>
+        <module>mall-shoppingCart</module>
+        <module>mall-utils</module>
+>>>>>>> hao
     </modules>
     <name>ct_mall</name>
     <description>Demo project for Spring Boot</description>

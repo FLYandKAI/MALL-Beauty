@@ -38,4 +38,10 @@ eureka:
   instance:
     instance-id: usr8081
 #    \u8BBF\u95EE\u8DEF\u5F84\u53EF\u4EE5\u663E\u793A\u662FIP\u5730\u5740
+<<<<<<< HEAD
     prefer-ip-address: true
+=======
+    prefer-ip-address: true
+
+#    120.25.217.98
+>>>>>>> hao
