@@ -2,10 +2,12 @@ package images.service.impl;
 
 import images.entity.ComImg;
 import images.mapper.ComImgMapper;
+import images.mapper.IntiImgMapper;
 import images.service.ComImgService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import utils.FastDFSUtil;
 
 import java.util.List;

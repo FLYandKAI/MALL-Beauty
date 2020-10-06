@@ -79,7 +79,7 @@ public class ComImgController {
 
     /**
      * @description: 删除一张图片
-     * @param: id:
+     * @param: id: 图片id
      * @return: java.lang.String
      * @author 黄俭豪
      * @date: 2020/10/2 21:54
