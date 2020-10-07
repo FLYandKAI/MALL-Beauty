@@ -1,16 +1,8 @@
 package usr;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-<<<<<<< HEAD
-
-@SpringBootTest
-public class usrApplicationTests {
-    @Test
-    void contextLoads(){
-
-    }
-=======
 import usr.entites.User;
 import usr.mapper.UserMapper;
 
@@ -49,5 +41,4 @@ public class usrApplicationTests {
         }
     }
 
->>>>>>> hao
 }

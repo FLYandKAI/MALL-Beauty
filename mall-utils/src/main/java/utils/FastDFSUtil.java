@@ -40,6 +40,7 @@ public class FastDFSUtil {
         } finally {
             if(ss!=null){
                 try {
+
                     ss.close();
                 } catch (IOException e) {
                     e.printStackTrace();

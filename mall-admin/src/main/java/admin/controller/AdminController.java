@@ -1,9 +1,10 @@
 package admin.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import admin.entity.Admin;
+import admin.service.impl.AdminServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -16,6 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
+    @Autowired
+    private AdminServiceImpl adminService;
+        //后台登陆验证
+    @PostMapping("/login")
+    public Admin checkAdmin(@PathVariable String adminUsername, String adminPassword){
+
+        return null;
+    }
 
 }
 

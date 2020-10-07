@@ -1,22 +1,19 @@
 package usr.controller;
 
 
-<<<<<<< HEAD
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
-=======
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import org.springframework.web.bind.annotation.RestController;
 import usr.entites.User;
 import usr.service.UserService;
 
 import java.util.List;
->>>>>>> hao
+
 
 /**
  * <p>
@@ -24,18 +21,14 @@ import java.util.List;
  * </p>
  *
  * @author 郑树凯
-<<<<<<< HEAD
  * @since 2020-09-20
-=======
- * @since 2020-09-30
->>>>>>> hao
+
  */
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
-<<<<<<< HEAD
-=======
+
     @Autowired
     private UserService userService;
 
@@ -65,6 +58,6 @@ public class UserController {
         List<User> list = userService.list(null);
         return list;
     }
->>>>>>> hao
+
 }
 

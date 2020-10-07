@@ -64,5 +64,16 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
     </dependencies>
+<build>
+        <resources>
+            <resource>
+                <!-- xml放在java目录下-->
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/mapper/xml/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
 
+</build>
 </project>

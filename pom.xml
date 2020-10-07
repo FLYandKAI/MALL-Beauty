@@ -10,11 +10,6 @@
         <module>mall-monitor</module>
         <module>mall-search</module>
         <module>mall-usr</module>
-<<<<<<< HEAD
-        <module>mall-images</module>
-        <module>mall-order</module>
-        <module>mall-comment</module>
-=======
         <module>mall-commodity</module>
         <module>mall-comment</module>
         <module>mall-order</module>
@@ -22,7 +17,6 @@
         <module>mall-admin</module>
         <module>mall-shoppingCart</module>
         <module>mall-utils</module>
->>>>>>> hao
     </modules>
     <name>ct_mall</name>
     <description>Demo project for Spring Boot</description>
@@ -44,10 +38,22 @@
         <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
         <spring-cloud-starter-netflix-eureka-client.version>2.2.2.RELEASE</spring-cloud-starter-netflix-eureka-client.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <java-jwt.version>3.4.0</java-jwt.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${java-jwt.version}</version>
+            </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
