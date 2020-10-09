@@ -88,6 +88,4 @@ public class MybatisRedisCache implements Cache {
     private String getKeyToMD5(String key){
         return DigestUtils.md5DigestAsHex(key.getBytes());
     }
-
-
 }

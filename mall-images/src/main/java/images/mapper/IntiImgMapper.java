@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
  * @since 2020-10-02
  */
 @Repository
-// @CacheNamespace(implementation = MybatisRedisCache.class, eviction = MybatisRedisCache.class)
+@CacheNamespace(implementation = MybatisRedisCache.class, eviction = MybatisRedisCache.class)
 public interface IntiImgMapper extends BaseMapper<IntiImg> {
 
 }

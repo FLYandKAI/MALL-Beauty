@@ -30,7 +30,8 @@ mybatis-plus:
     db-config:
       logic-delete-value: 1
       logic-not-delete-value: 0
-    #\u7ED1\u5B9A\u6307\u5B9A\u7684eureka
+  mapper-locations: classpath*:/images/mapper/xml/*Mapper.xml
+  type-aliases-package: images.entity
 eureka:
   client:
     service-url:

@@ -17,5 +17,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 @CacheNamespace(implementation = MybatisRedisCache.class, eviction = MybatisRedisCache.class)
 public interface ComImgMapper extends BaseMapper<ComImg> {
-
+    ComImg selectByComId(Long id);
 }

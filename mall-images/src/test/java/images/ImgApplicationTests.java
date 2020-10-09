@@ -44,6 +44,12 @@ public class ImgApplicationTests {
     }
 
     @Test
+    public void testFind2(){
+        System.out.println(comImgMapper.selectByComId(2L));
+    }
+
+    @Test
+
     public void testInsertInti(){
         IntiImg intiImg = new IntiImg();
         intiImg.setIntiId(4654611L);
