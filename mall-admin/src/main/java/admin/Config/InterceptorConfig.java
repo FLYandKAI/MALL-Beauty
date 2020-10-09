@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  * @Description:
  * @Date: Create in 10:38 2020/10/7
  */
-@Configuration
+//@Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
     @Resource
     private InterceptorHandle interceptorHandle;

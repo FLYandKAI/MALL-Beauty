@@ -15,21 +15,21 @@ public class FillHandle implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         log.info("start insert fill ....");
         this.setFieldValByName("createTime", new Date(), metaObject);
-<<<<<<< HEAD
+
         this.setFieldValByName("updataTime", new Date(), metaObject);
-=======
+
         this.setFieldValByName("updateTime", new Date(), metaObject);
->>>>>>> hao
+
     }
 
     //更新的填充策略
     @Override
     public void updateFill(MetaObject metaObject) {
         log.info("start update fill ....");
-<<<<<<< HEAD
+
         this.setFieldValByName("updataTime", new Date(), metaObject);
-=======
+
         this.setFieldValByName("updateTime", new Date(), metaObject);
->>>>>>> hao
+
     }
 }
