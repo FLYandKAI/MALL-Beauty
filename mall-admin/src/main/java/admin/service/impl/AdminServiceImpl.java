@@ -15,7 +15,6 @@ import utils.JWTUtil;
  * <p>
  *  服务实现类
  * </p>
- *
  * @author 郑树凯
  * @since 2020-09-29
  */
@@ -38,4 +37,5 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         }
         return false;
     }
+
 }

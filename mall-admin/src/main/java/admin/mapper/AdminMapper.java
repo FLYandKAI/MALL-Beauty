@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+
 /**
  * <p>
  *  Mapper 接口
@@ -15,5 +16,8 @@ import java.util.List;
  * @since 2020-09-29
  */
 public interface AdminMapper extends BaseMapper<Admin> {
+
     Admin selectByname(@Param("name") String name);
  }
+
+

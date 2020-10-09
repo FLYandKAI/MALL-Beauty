@@ -17,7 +17,6 @@
         <module>mall-admin</module>
         <module>mall-shoppingCart</module>
         <module>mall-utils</module>
-        <module>mall-common</module>
     </modules>
     <name>ct_mall</name>
     <description>Demo project for Spring Boot</description>
@@ -155,6 +154,7 @@
                 </executions>
             </plugin>
         </plugins>
+
     </build>
 
 </project>

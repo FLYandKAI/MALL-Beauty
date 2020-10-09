@@ -10,9 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mall-comment</artifactId>
-
-
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -44,6 +44,7 @@ public class ComImgController {
 
     @PostMapping("/upload")
     public String upload(Long id, MultipartFile myFile,Long userId) throws IOException {
+
         //获取文件对应的字节数组
         byte[] buffFile=myFile.getBytes();
         //获取文件名
@@ -79,7 +80,11 @@ public class ComImgController {
 
     /**
      * @description: 删除一张图片
+<<<<<<< HEAD
      * @param: id:
+=======
+     * @param: id: 图片id
+>>>>>>> hao
      * @return: java.lang.String
      * @author 黄俭豪
      * @date: 2020/10/2 21:54

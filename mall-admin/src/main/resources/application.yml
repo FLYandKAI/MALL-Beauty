@@ -15,6 +15,7 @@ spring:
         exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
   jackson: time-zone=UTC
 
+
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
@@ -23,6 +24,7 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
   mapper-locations: classpath*:/admin/mapper/xml/*Mapper.xml
+
 eureka:
   client:
     service-url:

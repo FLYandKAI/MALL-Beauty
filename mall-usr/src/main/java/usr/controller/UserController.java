@@ -1,14 +1,13 @@
 package usr.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.web.bind.annotation.RestController;
 import usr.entites.User;
 import usr.service.UserService;
 
@@ -21,8 +20,8 @@ import java.util.List;
  * </p>
  *
  * @author 郑树凯
- * @since 2020-09-20
 
+ * @since 2020-09-30
  */
 @RestController
 @RequestMapping("/user")

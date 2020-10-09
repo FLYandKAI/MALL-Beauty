@@ -2,6 +2,7 @@ package admin.service;
 
 import admin.entity.Admin;
 import api.CommonResult;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -15,4 +16,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface AdminService extends IService<Admin> {
     public CommonResult login(String adminUsername, String adminPassword);
     public boolean IsExistAdmin(String adminUsername);
+
+
 }

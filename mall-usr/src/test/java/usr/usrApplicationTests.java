@@ -1,13 +1,12 @@
 package usr;
 
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import usr.entites.User;
 import usr.mapper.UserMapper;
 
 import javax.annotation.Resource;
-import java.security.PublicKey;
 import java.util.List;
 
 @SpringBootTest
@@ -18,7 +17,8 @@ public class usrApplicationTests {
     private UserMapper userMapper;
 
     @Test
-    public void update(){
+
+    void update(){
         User user = new User();
         // User user = userMapper.selectById(4654654L);
         user.setUserId(4654654L);
@@ -30,12 +30,13 @@ public class usrApplicationTests {
     }
 
     @Test
-    public void deleteUser(){
+
+    void deleteUser(){
         System.out.println(userMapper.deleteById(123L));
     }
 
     @Test
-    public void selectUser(){
+    void selectUser(){
         List<User> users = userMapper.selectList(null);
         for (User user : users) {
             System.out.println(user);

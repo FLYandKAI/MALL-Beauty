@@ -1,7 +1,11 @@
 package images.mapper;
 
+
+import images.cache.MybatisRedisCache;
 import images.entity.ComImg;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.CacheNamespace;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -11,6 +15,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author 黄俭豪
  * @since 2020-10-02
  */
-public interface ComImgMapper extends BaseMapper<ComImg> {
 
+@Repository
+@CacheNamespace(implementation = MybatisRedisCache.class, eviction = MybatisRedisCache.class)
+public interface ComImgMapper extends BaseMapper<ComImg> {
+    ComImg selectByComId(Long id);
 }

@@ -37,7 +37,7 @@ eureka:
     register-with-eureka: true
   instance:
     instance-id: usr8081
-#    prefer-ip-address: true
-#    prefer-ip-address: true
+#    \u8BBF\u95EE\u8DEF\u5F84\u53EF\u4EE5\u663E\u793A\u662FIP\u5730\u5740
+    prefer-ip-address: true
 
 #    120.25.217.98

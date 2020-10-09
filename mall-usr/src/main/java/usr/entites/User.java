@@ -20,11 +20,8 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author 郑树凯
-<<<<<<< HEAD
+
  * @since 2020-09-20
-=======
- * @since 2020-09-30
->>>>>>> hao
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

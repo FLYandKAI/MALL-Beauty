@@ -1,6 +1,7 @@
 package admin.controller;
 
 
+
 import admin.anno.PassToken;
 import admin.entity.Admin;
 import admin.service.impl.AdminServiceImpl;
@@ -9,6 +10,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import utils.JWTUtil;
+
 
 /**
  * <p>
@@ -73,5 +75,6 @@ public class AdminController {
         System.out.println(removeById);
         return removeById;
     }
+
 }
 
