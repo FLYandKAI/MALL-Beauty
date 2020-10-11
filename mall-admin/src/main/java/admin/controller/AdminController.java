@@ -3,6 +3,7 @@ package admin.controller;
 
 
 import admin.anno.PassToken;
+import admin.anno.UserLoginToken;
 import admin.entity.Admin;
 import admin.service.impl.AdminServiceImpl;
 import api.CommonResult;
@@ -33,6 +34,7 @@ public class AdminController {
      * @param adminPassword
      * @return  token令牌
      */
+    @PassToken
     @PostMapping("/login")
     public CommonResult login(String adminUsername,String adminPassword){
         if (StringUtils.isEmpty(adminUsername) || StringUtils.isEmpty(adminPassword)) {
@@ -41,21 +43,16 @@ public class AdminController {
         }
         return adminService.login(adminUsername, adminPassword);
     }
-    //admin增加 手拿token
+    //admin增加
     @PostMapping("/user")
-    public CommonResult addAdmin(String adminUsername, String adminPassword, String token) {
-        Integer usrid = null;
-        try {
-            usrid = (Integer) JWTUtil.CheckToken(token).get("usrid");
-        } catch (Exception e) {
-            return CommonResult.unauthorized("token有错误");
-        }
+    @UserLoginToken
+    public CommonResult addAdmin(String adminUsername, String adminPassword) {
         if(adminService.IsExistAdmin(adminUsername)){
             return CommonResult.failed("该用户存在");
         }
         Admin admin = new Admin();
         admin.setAdminUsername(adminUsername);
-        admin.setByWho(Long.valueOf(usrid));
+        admin.setByWho((long) 1);
         admin.setAdminPassword(adminPassword);
         if(adminService.save(admin)){
             return CommonResult.success("添加成功");
@@ -64,12 +61,13 @@ public class AdminController {
     }
     @PutMapping("/user")
     //修改
-    public boolean modifyAdmin(Admin admin,String token) {
+    public boolean modifyAdmin(Admin admin) {
         System.out.println(admin);
         boolean b = adminService.updateById(admin);
         return b;
     }
     @DeleteMapping("/user/{id}")
+    //删除
     public boolean deleteAdmin(@PathVariable("id") Integer adminID) {
         boolean removeById = adminService.removeById(adminID);
         System.out.println(removeById);

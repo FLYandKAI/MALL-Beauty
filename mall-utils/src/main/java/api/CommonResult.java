@@ -8,6 +8,15 @@ public class CommonResult<T> {
     private String message;
     private T data;
 
+    @Override
+    public String toString() {
+        return "CommonResult{" +
+                "code=" + code +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                '}';
+    }
+
     protected CommonResult() {
     }
 

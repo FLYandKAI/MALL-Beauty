@@ -20,7 +20,7 @@ public class mallAdminTest {
     @Test
     void test(){
 //        adminMapper.selectByname("aaa");
-        System.out.println(adminService.login("aaa", "bbb"));
+        System.out.println(adminService.login("33333", "1111"));
 //        adminService.getById("1");
     }
 }

@@ -17,6 +17,7 @@
         <module>mall-admin</module>
         <module>mall-shoppingCart</module>
         <module>mall-utils</module>
+        <module>mall-gateway</module>
     </modules>
     <name>ct_mall</name>
     <description>Demo project for Spring Boot</description>
@@ -41,6 +42,7 @@
         <jjwt.version>0.9.1</jjwt.version>
         <java-jwt.version>3.4.0</java-jwt.version>
         <fastjson-version>1.2.70</fastjson-version>
+        <spring-cloud-starter-gateway.version>2.2.2.RELEASE</spring-cloud-starter-gateway.version>
     </properties>
 
     <dependencyManagement>
@@ -74,6 +76,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
                 <version>${spring-cloud-starter-netflix-eureka-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${spring-cloud-starter-gateway.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>

@@ -25,9 +25,11 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     private AdminMapper adminMapper;
     //登录
     public CommonResult login(String adminUsername, String adminPassword){
-        Admin admin = adminMapper.selectByname(adminUsername);
-        if(admin==null&&admin.getAdminPassword()!=adminPassword) return CommonResult.validateFailed();
-        else return CommonResult.success(JWTUtil.createToken(admin.getAdminId()));
+        Admin admin =adminMapper.selectByname(adminUsername);
+        System.out.println(!admin.getAdminPassword().equals(adminPassword));
+            if(admin==null) return CommonResult.validateFailed();
+            if (!admin.getAdminPassword().equals(adminPassword))  return CommonResult.validateFailed();
+        return CommonResult.success(JWTUtil.createToken(admin.getAdminId()));
     }
 
     //检测该用户是否存在
