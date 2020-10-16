@@ -8,7 +8,6 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-
       initial-size: 5
       min-idle: 10
       max-active: 20
@@ -16,7 +15,7 @@ spring:
         exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
   profiles:
     active: dev
-#    redis配置(这是豪的服务器地址，注意更换）
+  #    redis配置(这是豪的服务器地址，注意更换）
   redis:
     host: 47.106.183.207
     port: 6379
@@ -26,20 +25,18 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
-    cache-enabled: true
+    auto-mapping-behavior: full
   global-config:
     db-config:
       logic-delete-value: 1
       logic-not-delete-value: 0
-
   mapper-locations: classpath*:/images/mapper/xml/*Mapper.xml
   type-aliases-package: images.entity
 eureka:
   client:
     service-url:
       defaultZone: http://root:root@localhost:8761/eureka/
-#      使用eureka记得下面俩改为true
+    #      使用eureka记得下面俩改为true
     fetch-registry: false
     register-with-eureka: false
   instance:

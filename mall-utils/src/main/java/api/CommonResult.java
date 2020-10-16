@@ -1,9 +1,11 @@
 package api;
 
+import java.io.Serializable;
+
 /**
  * 通用返回对象
  */
-public class CommonResult<T> {
+public class CommonResult<T> implements Serializable {
     private long code;
     private String message;
     private T data;

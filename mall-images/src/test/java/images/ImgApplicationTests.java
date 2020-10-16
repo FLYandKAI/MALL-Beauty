@@ -38,7 +38,7 @@ public class ImgApplicationTests {
     }
 
 
-    @Test
+    /*@Test
     public void testFind(){
         List<ComImg> all = comImgService.findAll();
         all.forEach(one-> System.out.println("one = " + one));
@@ -46,7 +46,7 @@ public class ImgApplicationTests {
         System.out.println("===================================");
 
         comImgService.findAll().forEach(one-> System.out.println("one = " + one));
-    }
+    }*/
 
     @Test
     public void testFind2(){

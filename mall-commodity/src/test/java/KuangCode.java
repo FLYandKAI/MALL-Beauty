@@ -27,7 +27,7 @@ public class KuangCode {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         //设置代码生成路径
-        gc.setOutputDir(projectPath + "/mall-shoppingCart/src/main/java");
+        gc.setOutputDir(projectPath + "/mall-commodity/src/main/java");
         gc.setAuthor("黄俭豪");
         //  是否生成完打开文件夹
         gc.setOpen(false);
@@ -51,7 +51,7 @@ public class KuangCode {
         PackageConfig pc = new PackageConfig();
         // pc.setModuleName("order");
         //父包名
-        pc.setParent("shoppingCart");
+        pc.setParent("commodity");
         pc.setEntity("entity");
         pc.setMapper("mapper");
         pc.setService("service");
@@ -59,7 +59,7 @@ public class KuangCode {
         mpg.setPackageInfo(pc);
 //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("shopping_cart","user","commodity"); // 设置要映射的表名
+        strategy.setInclude("com_sort","commodity","item_param"); // 设置要映射的表名
         //       驼峰命名
         strategy.setNaming(NamingStrategy.underline_to_camel);
         //        列也支持下划线转驼峰

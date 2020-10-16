@@ -20,7 +20,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author 黄俭豪
- * @since 2020-09-29
+ * @since 2020-10-11
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -34,11 +34,11 @@ public class ComSort implements Serializable {
     @TableId(value = "com_type_id", type = IdType.ID_WORKER)
     private Long comTypeId;
 
-    @ApiModelProperty(value = "商品父类编号")
-    private Long comTypeParentId;
-
     @ApiModelProperty(value = "类别名称")
     private String comTypeName;
+
+    @ApiModelProperty(value = "商品父类编号")
+    private Long comTypeParentId;
 
     @ApiModelProperty(value = "类别状态（1为可用，0为不可用）")
     private Integer comTypeStatus;
@@ -59,8 +59,7 @@ public class ComSort implements Serializable {
     @Version
     private Long lastVersion;
 
-    @ApiModelProperty(value = "操作者")
+    @ApiModelProperty(value = "操作者（用户编号）")
     private Long byWho;
-
 
 }

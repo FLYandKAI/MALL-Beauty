@@ -21,7 +21,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author 黄俭豪
- * @since 2020-09-29
+ * @since 2020-10-11
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -41,11 +41,11 @@ public class Commodity implements Serializable {
     @ApiModelProperty(value = "商品名称")
     private String comName;
 
-    @ApiModelProperty(value = "商品详情编号")
-    private Long comItemParamId;
+    // @ApiModelProperty(value = "商品详情编号")
+    // private Long comItemParamId;
 
     @ApiModelProperty(value = "商品价格")
-    private BigDecimal comPrice;
+    private Integer comPrice;
 
     @ApiModelProperty(value = "商品库存")
     private Integer comStock;
@@ -53,8 +53,9 @@ public class Commodity implements Serializable {
     @ApiModelProperty(value = "商品状态（0为下架，1为销售）")
     private Integer comStatus;
 
-    @ApiModelProperty(value = "商品图片编号")
-    private Long comImgId;
+    @ApiModelProperty(value = "主要的图片（首页显示）")
+    @TableField("mainImage")
+    private String mainImage;
 
     @ApiModelProperty(value = "创建时间")
     @TableField(fill = FieldFill.INSERT)
@@ -70,9 +71,9 @@ public class Commodity implements Serializable {
 
     @ApiModelProperty(value = "历史版本")
     @Version
-    private Long lastVersion;
+    private Integer lastVersion;
 
-    @ApiModelProperty(value = "操作者")
+    @ApiModelProperty(value = "操作者（用户编号）")
     private Long byWho;
 
 
