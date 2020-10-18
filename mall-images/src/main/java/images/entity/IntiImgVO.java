@@ -1,18 +1,14 @@
-package commodity.entity;
+package images.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.Version;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -20,13 +16,13 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author 黄俭豪
- * @since 2020-09-29
+ * @since 2020-10-02
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @ApiModel(value="IntiImg对象", description="帖子图片信息表")
-public class IntiImg implements Serializable {
+public class IntiImgVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -34,11 +30,11 @@ public class IntiImg implements Serializable {
     @TableId(value = "inti_img_id", type = IdType.ID_WORKER)
     private Long intiImgId;
 
-    @ApiModelProperty(value = "帖子组名（服务器保存)")
-    private String intiImgGroup;
+    @ApiModelProperty(value = "帖子图片编号(一个帖子对应多个图片编号)")
+    private Long intiId;
 
-    @ApiModelProperty(value = "帖子图片地址")
-    private String intiImgAddress;
+    @ApiModelProperty(value = "帖子图片地址(由服务器+存储组名+存储地址拼接)")
+    private String address;
 
     @ApiModelProperty(value = "帖子图片上传名字")
     private String intiImgName;
@@ -57,7 +53,7 @@ public class IntiImg implements Serializable {
 
     @ApiModelProperty(value = "历史版本")
     @Version
-    private Long lastVersion;
+    private Integer lastVersion;
 
     @ApiModelProperty(value = "操作者")
     private Long byWho;

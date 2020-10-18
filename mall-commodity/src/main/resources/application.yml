@@ -8,34 +8,46 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      initial-size: 5 #\u8FDE\u63A5\u6C60\u521D\u59CB\u5316\u5927\u5C0F
-      min-idle: 10 #\u6700\u5C0F\u7A7A\u95F2\u8FDE\u63A5\u6570
-      max-active: 20 #\u6700\u5927\u8FDE\u63A5\u6570
+      initial-size: 5
+      min-idle: 10
+      max-active: 20
       web-stat-filter:
-        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #\u4E0D\u7EDF\u8BA1\u8FD9\u4E9B\u8BF7\u6C42\u6570\u636E
-#      stat-view-servlet: #\u8BBF\u95EE\u76D1\u63A7\u7F51\u9875\u7684\u767B\u5F55\u7528\u6237\u540D\u548C\u5BC6\u7801
-#        login-username: druid
-#        login-password: druid
-  #\u5F00\u53D1\u73AF\u5883
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
   profiles:
     active: dev
+  #    redis配置(这是豪的服务器地址，注意更换）
+  redis:
+    host: 47.106.183.207
+    port: 6379
+    database: 0
 
-#\u65E5\u5FD7\u914D\u7F6E
+#mybatis-plus配置
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    自动映射
+    auto-mapping-behavior: full
   global-config:
+#    逻辑删除
     db-config:
       logic-delete-value: 1
       logic-not-delete-value: 0
-    #\u7ED1\u5B9A\u6307\u5B9A\u7684eureka
+#      mapper配置路径
+  mapper-locations: classpath*:/commodity/mapper/xml/*Mapper.xml
+#  实体类-mapper别名
+  type-aliases-package: commodity.entity
 eureka:
   client:
     service-url:
       defaultZone: http://root:root@localhost:8761/eureka/
-    fetch-registry: true
-    register-with-eureka: true
+    #      使用eureka记得下面俩改为true
+    fetch-registry: false
+    register-with-eureka: false
   instance:
     instance-id: usr8081
-#    \u8BBF\u95EE\u8DEF\u5F84\u53EF\u4EE5\u663E\u793A\u662FIP\u5730\u5740
     prefer-ip-address: true
+
+#全局变量--用来存放fastDFS服务器地址IP
+imagesAddress: 47.106.183.207
+
+##    120.25.217.98

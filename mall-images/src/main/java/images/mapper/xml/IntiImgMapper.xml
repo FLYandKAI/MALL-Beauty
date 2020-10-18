@@ -3,8 +3,5 @@
 <mapper namespace="images.mapper.IntiImgMapper">
 
 
-    <cache-ref  namespace="images.mapper.ComImgMapper"/>
-
-<!--    <cache-ref  namespace="images.mapper.ComImgMapper"/>-->
 
 </mapper>
